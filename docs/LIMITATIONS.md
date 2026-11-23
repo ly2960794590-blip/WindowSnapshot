@@ -64,5 +64,10 @@ Do not use the mouse or keyboard while a restore is running.
 
 One machine so far: a MacBook with an external 4K display, macOS 27.2, Chinese system language,
 Stage Manager on. Split View and ordered full screen were exercised with Chrome windows only.
-Nothing has been run on macOS 13, 14 or 15, or on an English system. Please run `wsnap doctor`
-and open an issue with its output if something does not work on yours.
+
+CI builds the tool, runs the unit tests and runs `wsnap doctor` on GitHub's macOS runners (English
+system). There the five undocumented functions are present and the layout is readable on
+macOS 15, but no backup or restore is exercised, since the runners have no real windows to move.
+Nothing has been run on macOS 13 or 14.
+
+Please run `wsnap doctor` and open an issue with its output if something does not work on yours.
