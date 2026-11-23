@@ -1,0 +1,5 @@
+.build/
+legacy/
+*.xcodeproj
+.DS_Store
+.swiftpm/

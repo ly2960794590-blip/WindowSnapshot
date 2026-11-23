@@ -1,0 +1,21 @@
+name: CI
+on:
+  push:
+  pull_request:
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-14, macos-15]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build
+        run: swift build -c release
+      - name: Unit tests
+        run: swift test
+      - name: Doctor (with and without private APIs)
+        run: |
+          .build/release/wsnap doctor || true
+          WSNAP_NO_PRIVATE_API=1 .build/release/wsnap doctor || true
