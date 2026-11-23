@@ -70,7 +70,18 @@ At the end it lists anything it could not do.
 
 ## Install
 
-Requires macOS 13 or later and the Xcode command line tools (`xcode-select --install`).
+With [Homebrew](https://brew.sh):
+
+```sh
+brew install ly2960794590-blip/tap/wsnap
+```
+
+Homebrew downloads the source and compiles it on your Mac (about a minute), so there is no
+unsigned binary for macOS to block. It needs macOS 13 or later and the Xcode command line tools
+(`xcode-select --install`).
+
+<details>
+<summary>Or build it yourself</summary>
 
 ```sh
 git clone https://github.com/ly2960794590-blip/WindowSnapshot.git
@@ -78,6 +89,8 @@ cd WindowSnapshot
 swift build -c release
 cp .build/release/wsnap /usr/local/bin/    # or anywhere on your PATH
 ```
+
+</details>
 
 Then check your setup:
 

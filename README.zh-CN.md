@@ -19,7 +19,17 @@ macOS 重启后会重新打开 App，但窗口会全部堆在一个桌面上：�
 
 ## 安装
 
-需要 macOS 13 或更高版本，以及 Xcode 命令行工具（`xcode-select --install`）。
+用 [Homebrew](https://brew.sh) 安装：
+
+```sh
+brew install ly2960794590-blip/tap/wsnap
+```
+
+Homebrew 会下载源码并在你的 Mac 上编译（大约一分钟），所以不会被系统当成"来源不明的程序"
+拦下。需要 macOS 13 或更高版本，以及 Xcode 命令行工具（`xcode-select --install`）。
+
+<details>
+<summary>或者自己编译</summary>
 
 ```sh
 git clone https://github.com/ly2960794590-blip/WindowSnapshot.git
@@ -27,6 +37,8 @@ cd WindowSnapshot
 swift build -c release
 cp .build/release/wsnap /usr/local/bin/    # 或 PATH 里的任意位置
 ```
+
+</details>
 
 然后检查环境：
 
