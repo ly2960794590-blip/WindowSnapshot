@@ -9,9 +9,10 @@
 Save your Mac's whole window layout before a reboot or a macOS update, and put it back afterwards
 with one command.
 
-macOS reopens your apps after a restart, but it piles the windows onto one desktop: full-screen
-apps come back as ordinary windows, Split Views are gone, and browser windows land on the wrong
-desktop. `wsnap` records the layout and rebuilds it:
+macOS tries to reopen your windows after a restart, but it does not always put them back where
+they were: windows can land on the wrong desktop, full-screen apps can come back as ordinary
+windows, and a Split View can come back as two separate windows. `wsnap` records the layout
+itself and rebuilds it:
 
 - which **desktop (Space)** each window is on, on **every display**
 - which windows are **full screen**, and in what order the full-screen spaces sit in Mission Control
