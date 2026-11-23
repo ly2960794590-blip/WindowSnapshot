@@ -67,7 +67,7 @@ Stage Manager on. Split View and ordered full screen were exercised with Chrome 
 
 CI builds the tool, runs the unit tests and runs `wsnap doctor` on GitHub's macOS runners (English
 system). There the five undocumented functions are present and the layout is readable on
-macOS 15, but no backup or restore is exercised, since the runners have no real windows to move.
+macOS 15 and 26, but no backup or restore is exercised, since the runners have no real windows to move.
 Nothing has been run on macOS 13 or 14.
 
 Please run `wsnap doctor` and open an issue with its output if something does not work on yours.
